@@ -1,0 +1,4 @@
+apiVersion: v2
+name: mycluster
+description: A Helm chart for a simple cluster with Kafka, Zookeeper, an async worker, and a REST API.
+version: 1.0.0

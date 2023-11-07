@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: async-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: async-worker
+  template:
+    metadata:
+      labels:
+        app: async-worker
+    spec:
+      containers:
+        - name: async-worker
+          image: "kwaark/async_worker:v1.0"
+          env:
+            - name: BROKER_URL
+              value: "kafka://kafka:9092"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "1"
+              memory: "256Mi"
