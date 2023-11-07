@@ -1,12 +1,12 @@
-#Helm Chart para API REST & Async Worker
-#####Este Helm chart instala a aplicação API REST e o Async Worker em um cluster Kubernetes.
+# Helm Chart para API REST & Async Worker
+##### Este Helm chart instala a aplicação API REST e o Async Worker em um cluster Kubernetes.
 
-##Pré-requisitos
+## Pré-requisitos
 Kubernetes 1.19+
 minikube v1.30.1+
 Helm 3.0+
 
-##Instalação
+## Instalação
 Para instalar o chart com o nome de meu-release:
 
 ```
@@ -15,7 +15,7 @@ helm install meu-release path/to/chart-directory
 
 O comando acima instala a aplicação no Kubernetes cluster com os valores padrão de configuração.
 
-##Valores dos pods
+## Valores dos pods
 
 | Parâmetro                     | Descrição                             | Valor Padrão               |
 |-------------------------------|---------------------------------------|----------------------------|
@@ -27,7 +27,7 @@ O comando acima instala a aplicação no Kubernetes cluster com os valores padr�
 | `kafka.image.tag`             | Tag da imagem Docker                  | `latest`                   |
 | `zookeeper.image.repository`  | Imagem Docker do Zookeeper            | `bitnami/zookeeper`        |
 | `zookeeper.image.tag`         | Tag da imagem Docker                  | `latest`                   |
-##Valores dos services
+## Valores dos services
 | Parâmetro                     | Descrição                             | Valor Padrão               |
 |-------------------------------|---------------------------------------|----------------------------|
 | `apiRest.service.type`        | Tipo de serviço para expor a API REST | `NodePort`                 |
@@ -39,7 +39,7 @@ O comando acima instala a aplicação no Kubernetes cluster com os valores padr�
 
 
 
-##Comandos que podem ajudar:
+## Comandos que podem ajudar:
 
 Navegue até a a pasta onde fica o Chart.yaml e use o comando para iniciar o cluster:
 ```
@@ -54,10 +54,10 @@ Use esse comando para deletar o cluster:
 helm delete meu-cluster
 ```
 
-##Acessando a API REST
+## Acessando a API REST
 Após a instalação, a API REST estará acessível dentro do cluster na porta do serviço api-rest.
 
-##Acessando a API REST Localmente:
+## Acessando a API REST Localmente:
 Use o comando para listar os services e pegar a porta do service API-REST:
 ```
 kubectl get srv
