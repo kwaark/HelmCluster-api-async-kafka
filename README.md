@@ -2,9 +2,9 @@
 ##### Este Helm chart instala a aplicação API REST e o Async Worker em um cluster Kubernetes.
 
 ## Pré-requisitos
-Kubernetes 1.19+
-minikube v1.30.1+
-Helm 3.0+
+Kubernetes 1.19+  
+minikube v1.30.1+  
+Helm 3.0+  
 
 ## Instalação
 Para instalar o chart com o nome de meu-release:
